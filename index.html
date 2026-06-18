@@ -34,12 +34,17 @@
             line-height: 1.2;
             text-shadow: 0 0 5px #33ff33, 0 0 10px #33ff3366;
             white-space: pre;
-            /* Left-align text so the columns stay aligned; the parent's
-               text-align:center then centers this inline-block as a whole.
-               (text-align:center on a <pre> centers each line independently,
-               which shears the ASCII art apart.) */
+            /* Left-align text so columns stay aligned, then center each
+               <pre> as a shrink-to-fit block. (text-align:center on a
+               multi-line <pre> centers each line independently and shears
+               the ASCII art apart.) */
             text-align: left;
-            display: inline-block;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .brand {
+            margin-top: 18px;
         }
 
         .scanline {
@@ -115,23 +120,22 @@
     <div class="scanline"></div>
     <div class="vignette"></div>
     <div class="terminal">
-        <pre>
-                       /\_/\
-                  ____/ o o \
-                 /~____  =Y= /
-                (______)__m_m)
-                .-----------.
-                |\   /|\   /|
-                | \ / | \ / |
-                |  X  |  X  |
-                | / \ | / \ |
-                |/   \|/   \|
-                '-----------'
-
-                  ╔═══════════════════╗
-                  ║     lesha.io      ║
-                  ╚═══════════════════╝
-        </pre>
+        <pre class="art">
+       /\_/\
+  ____/ o o \
+ /~____  =Y= /
+(______)__m_m)
+.-----------.
+|\   /|\   /|
+| \ / | \ / |
+|  X  |  X  |
+| / \ | / \ |
+|/   \|/   \|
+'-----------'</pre>
+        <pre class="brand">
+╔═══════════════════╗
+║     lesha.io      ║
+╚═══════════════════╝</pre>
 
         <div class="install">
             <div class="install-title">[ install · android ]</div>
