@@ -34,6 +34,12 @@
             line-height: 1.2;
             text-shadow: 0 0 5px #33ff33, 0 0 10px #33ff3366;
             white-space: pre;
+            /* Left-align text so the columns stay aligned; the parent's
+               text-align:center then centers this inline-block as a whole.
+               (text-align:center on a <pre> centers each line independently,
+               which shears the ASCII art apart.) */
+            text-align: left;
+            display: inline-block;
         }
 
         .scanline {
