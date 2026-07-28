@@ -11,6 +11,11 @@ workspace, or [on GitHub](https://github.com/lexakalex/terrabond/blob/main/.llm/
 
 ## File one from here
 
+Two fleet skills wrap this and are available from this repo (their scripts run from the
+terrabond root): **`file-issue`** validates the label triple, infers scope from the git
+remote, scans for duplicates, and carries the issue body template; **`list-issues`** gives
+the backlog as repo × priority plus filters, view, retriage, and close.
+
 ```sh
 gh issue create --repo lexakalex/terrabond \
   --title "..." --body-file /tmp/issue.md \
